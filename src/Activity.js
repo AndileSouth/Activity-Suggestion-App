@@ -71,14 +71,16 @@ async function fetchData(type) {
     return (
       <div className="Activity">
         <div className="content">
+          <h1>Activity Suggestions</h1>
           <div className="activity-box">{
           // 5. the Activity is used in the dom
           activity}</div>
-          <button className='generate' onClick={
+          <button className="generate cursor" onClick={
             //1.1. button invokes function
             generate}>Generate Activity</button>
 
-        <div>
+        <div className='filter'>
+          <h3>Filter suggestion</h3>
           <input type="radio" name='type' value="random"  id='random' checked={selectedType === 'random'}
             onChange={handleTypeChange}/>
           <label htmlFor="random"> random</label>
@@ -121,6 +123,7 @@ async function fetchData(type) {
 
           </div>
           
+          <div className='creator'>Created by <span className='link'>AndileSouth</span> a front-end Developer using https://www.boredapi.com/ </div>
         </div>
       </div>
     );
