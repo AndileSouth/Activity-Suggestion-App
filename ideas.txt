@@ -1,0 +1,5 @@
+features
+
+1. history to save generated activities
+2. active activity and activity done
+3. save activities to local storage for later.
