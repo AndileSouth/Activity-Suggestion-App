@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Activity-Suggestion-App/static/css/main.ca9e565e.css",
+    "main.js": "/Activity-Suggestion-App/static/js/main.fc52de91.js",
+    "static/js/787.846e4d87.chunk.js": "/Activity-Suggestion-App/static/js/787.846e4d87.chunk.js",
+    "index.html": "/Activity-Suggestion-App/index.html",
+    "main.ca9e565e.css.map": "/Activity-Suggestion-App/static/css/main.ca9e565e.css.map",
+    "main.fc52de91.js.map": "/Activity-Suggestion-App/static/js/main.fc52de91.js.map",
+    "787.846e4d87.chunk.js.map": "/Activity-Suggestion-App/static/js/787.846e4d87.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ca9e565e.css",
+    "static/js/main.fc52de91.js"
+  ]
+}
