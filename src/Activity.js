@@ -4,6 +4,9 @@ import './Activity.css'
 
 // 1. this functions gets the full object but only works when invoked by the other
 
+  // 1. [for moreInfo] const objData
+  /* const [objData, SetObjdata] = useState(null); */
+
 async function fetchData(type) {
     try {
       // Use different URLs based on the selected type
@@ -14,12 +17,20 @@ async function fetchData(type) {
 
       const response = await fetch(apiUrl);
       const jsonData = await response.json();
+
+      // 2. [for moreInfo] update state of objData
+      /* if (jsonData) {
+        SetObjdata(jsonData);
+      }  */
+      
       return jsonData;
     } catch (error) {
       console.error('Error fetching data', error);
       return null;
     }
   }
+
+
   
   function Activity() {
 
@@ -123,7 +134,7 @@ async function fetchData(type) {
 
           </div>
           
-          <div className='creator'>Created by <span className='link'>AndileSouth</span> a front-end Developer using https://www.boredapi.com/ </div>
+          
         </div>
       </div>
     );

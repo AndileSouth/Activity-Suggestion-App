@@ -4,3 +4,22 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: yellow;
+    height: 100vh;
+}
+
+.creator {
+    padding-top: 10vh;
+    text-decoration-style: underline;
+}
+
+.link {
+    text-decoration: underline;
+    
+}
+
+.link:hover {
+    cursor: pointer;
+    color: rgb(255, 72, 0);
+}

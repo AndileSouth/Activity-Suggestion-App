@@ -1,5 +1,6 @@
 import Activity from "./Activity";
 import './Home.css';
+import MoreInfo from "./MoreInfo";
 
 function Home() {
 
@@ -10,7 +11,8 @@ function Home() {
          
 
           <Activity/>
-          
+          <MoreInfo/>
+          <div className='creator'>Created by <span className='link'>AndileSouth</span> a front-end Developer using https://www.boredapi.com/ </div>
         </div>
       </div>
     );
