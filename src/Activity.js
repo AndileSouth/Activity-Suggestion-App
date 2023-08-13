@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import './Activity.css'
 
+import MoreInfo from './MoreInfo';
+
 
 // 1. this functions gets the full object but only works when invoked by the other
 
-  // 1. [for moreInfo] const objData
-  /* const [objData, SetObjdata] = useState(null); */
+
 
 async function fetchData(type) {
     try {
@@ -17,11 +18,6 @@ async function fetchData(type) {
 
       const response = await fetch(apiUrl);
       const jsonData = await response.json();
-
-      // 2. [for moreInfo] update state of objData
-      /* if (jsonData) {
-        SetObjdata(jsonData);
-      }  */
       
       return jsonData;
     } catch (error) {
@@ -33,6 +29,7 @@ async function fetchData(type) {
 
   
   function Activity() {
+     
 
     const [data, setData] = useState(null);
     const [activity, setActivity] = useState(null);
@@ -52,6 +49,8 @@ async function fetchData(type) {
         if (jsonData) {
           setData(jsonData);
           setActivity(jsonData.activity);
+          
+
           console.log(jsonData);
         }
       }
@@ -66,6 +65,7 @@ async function fetchData(type) {
         // 3. if the fetch is successful we update the setActivity to the new string value
         if (jsonData) {
             setData(jsonData);
+            
             setActivity(jsonData.activity);
             console.log(jsonData);
           };//
@@ -94,47 +94,47 @@ async function fetchData(type) {
           <h3>Filter suggestion</h3>
           <input type="radio" name='type' value="random"  id='random' checked={selectedType === 'random'}
             onChange={handleTypeChange}/>
-          <label htmlFor="random"> random</label>
+          <label htmlFor="random"> Random</label>
 
           <input type="radio" name='type' value="social"  id='social' checked={selectedType === 'social'}
             onChange={handleTypeChange}/>
-          <label htmlFor="social"> social</label>
+          <label htmlFor="social"> Social</label>
 
           <input type="radio" name='type' value="education"  id='education' checked={selectedType === 'education'}
             onChange={handleTypeChange}/>
-          <label htmlFor="education"> education</label>
+          <label htmlFor="education"> Education</label>
 
           <input type="radio" name='type' value="recreational"  id='recreational' checked={selectedType === 'recreational'}
             onChange={handleTypeChange}/>
-          <label htmlFor="recreational"> recreational</label>
+          <label htmlFor="recreational"> Recreational</label>
 
           <input type="radio" name='type' value="diy"  id='diy' checked={selectedType === 'diy'}
             onChange={handleTypeChange}/>
-          <label htmlFor="diy"> diy</label>
+          <label htmlFor="diy"> Diy</label>
 
           <input type="radio" name='type' value="charity"  id='charity' checked={selectedType === 'charity'}
             onChange={handleTypeChange}/>
-          <label htmlFor="charity"> charity</label>
+          <label htmlFor="charity"> Charity</label>
 
           <input type="radio" name='type' value="cooking"  id='cooking' checked={selectedType === 'cooking'}
             onChange={handleTypeChange}/>
-          <label htmlFor="cooking"> cooking</label>
+          <label htmlFor="cooking"> Cooking</label>
 
           <input type="radio" name='type' value="relaxation"  id='relaxation' checked={selectedType === 'type'}
             onChange={handleTypeChange}/>
-          <label htmlFor="relaxation"> relaxation</label>
+          <label htmlFor="relaxation"> Relaxation</label>
 
           <input type="radio" name='type' value="music"  id='music' checked={selectedType === 'music'}
             onChange={handleTypeChange}/>
-          <label htmlFor="music"> music</label>
+          <label htmlFor="music"> Music</label>
 
           <input type="radio" name='type' value="busywork"  id='busywork' checked={selectedType === 'bustywork'}
             onChange={handleTypeChange}/>
-          <label htmlFor="busywork"> busywork</label>
+          <label htmlFor="busywork"> Busywork</label>
 
           </div>
           
-          
+          {activity && <MoreInfo jsonData={data} />}
         </div>
       </div>
     );
